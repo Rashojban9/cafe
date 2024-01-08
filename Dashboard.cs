@@ -17,9 +17,6 @@ namespace Bislerium_cafe
             InitializeComponent();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

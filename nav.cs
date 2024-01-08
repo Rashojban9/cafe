@@ -34,9 +34,9 @@ namespace Bislerium_cafe
             ButtonColorReset(btnDashboard);
 
             lblTabTitle.Text = "Dashboard";
-            this.panelevent.Controls.Clear();
+            this.pnlContent.Controls.Clear();
             Dashboard FrmDashboard_Vrb = new Dashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.panelevent.Controls.Add(FrmDashboard_Vrb);
+            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
         }
 
@@ -45,96 +45,77 @@ namespace Bislerium_cafe
             Color activeColor = Color.FromArgb(31, 27, 48);
             Color btnColor = Color.FromArgb(26, 23, 40);
             btnDashboard.BackColor = btnColor;
-            menu_btn.BackColor = btnColor;
-            btnEmployees.BackColor = btnColor;
-            btnMenuList.BackColor = btnColor;
-            btnAnalytics.BackColor = btnColor;
            
+            btnEmployees.BackColor = btnColor;
+            btnCustomers.BackColor = btnColor;
+            btnReprts.BackColor = btnColor;
+            btnCoffee.BackColor = btnColor;
+            btnAddons.BackColor = btnColor;
+
+
             btnSettings.BackColor = btnColor;
             button.BackColor = activeColor;
-        }
-
-        private void BtnDashboard_Click(object sender, EventArgs e)
-        {
-            pnlNavIndicator.Height = btnDashboard.Height;
-            pnlNavIndicator.Top = btnDashboard.Top;
-            pnlNavIndicator.Left = btnDashboard.Left;
-            ButtonColorReset(btnDashboard);
-
-            lblTabTitle.Text = "Dashboard";
-            this.pnlContent.Controls.Clear();
-            Dashboard FrmDashboard_Vrb = new Dashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
-            FrmDashboard_Vrb.Show();
         }
 
        
         
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new login().Show();
-        }
-
+       
         private void pnlContent_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void menu_btn_Click(object sender, EventArgs e)
+      
+        private void panelevent_Paint(object sender, PaintEventArgs e)
         {
-            pnlNavIndicator.Height = btnDashboard.Height;
-            pnlNavIndicator.Top = btnDashboard.Top;
-            pnlNavIndicator.Left = btnDashboard.Left;
-            ButtonColorReset(btnDashboard);
-
-            lblTabTitle.Text = "Menu";
-            this.panelevent.Controls.Clear();
-            menu FrmDashboard_Vrb = new menu() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.panelevent.Controls.Add(FrmDashboard_Vrb);
-            FrmDashboard_Vrb.Show();
 
         }
 
-        private void btnDashboard_Click_1(object sender, EventArgs e)
+       
+
+        private void btnDashboard_Click_2(object sender, EventArgs e)
         {
             pnlNavIndicator.Height = btnDashboard.Height;
             pnlNavIndicator.Top = btnDashboard.Top;
             pnlNavIndicator.Left = btnDashboard.Left;
             ButtonColorReset(btnDashboard);
-
             lblTabTitle.Text = "Dashboard";
-            this.panelevent.Controls.Clear();
+            this.pnlContent.Controls.Clear();
             Dashboard FrmDashboard_Vrb = new Dashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.panelevent.Controls.Add(FrmDashboard_Vrb);
+            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
 
         }
 
-        private void btnEmployees_Click(object sender, EventArgs e)
+        private void btnCustomers_Click(object sender, EventArgs e)
         {
-            pnlNavIndicator.Height = btnDashboard.Height;
-            pnlNavIndicator.Top = btnDashboard.Top;
-            pnlNavIndicator.Left = btnDashboard.Left;
-            ButtonColorReset(btnDashboard);
-
-            lblTabTitle.Text = "Order";
-            this.panelevent.Controls.Clear();
-            order FrmDashboard_Vrb = new order() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.panelevent.Controls.Add(FrmDashboard_Vrb);
+            pnlNavIndicator.Height = btnCustomers.Height;
+            pnlNavIndicator.Top = btnCustomers.Top;
+            pnlNavIndicator.Left = btnCustomers.Left;
+            ButtonColorReset(btnCustomers);
+            lblTabTitle.Text = "Customer";
+            this.pnlContent.Controls.Clear();
+            Adminemployee FrmDashboard_Vrb = new Adminemployee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
             FrmDashboard_Vrb.Show();
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new login().Show();
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
 
         }
     }
-}
+    }
+
