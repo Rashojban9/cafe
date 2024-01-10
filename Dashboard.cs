@@ -1,12 +1,15 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace Bislerium_cafe
 {
@@ -17,6 +20,38 @@ namespace Bislerium_cafe
             InitializeComponent();
         }
 
-       
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
+            string excelPath = "C:\\Users\\rasho\\Desktop\\Application development\\staff_login_data.xlsx";
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage(new FileInfo(excelPath)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+
+                int rowCount = worksheet.Dimension.Rows;
+               
+                for (int row = 2; row <= rowCount; row++)
+                {
+                    string quantity = worksheet.Cells[row, 3].Text;
+
+                    if (int.TryParse(quantity, out int quantityValue))
+                    {
+                       quantityValue += quantityValue;
+                        rrr.Text = quantityValue.ToString();
+                    }
+                    else
+                    {
+                        // Handle the case where quantity cannot be parsed as an integer
+                        Console.WriteLine($"Invalid quantity format in row {row}");
+                    }
+                }
+
+                
+            }
+        }
     }
 }
+

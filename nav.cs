@@ -27,7 +27,8 @@ namespace Bislerium_cafe
      );
         public nav()
         {
-            InitializeComponent(); Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
+            InitializeComponent(); 
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             pnlNavIndicator.Height = btnDashboard.Height;
             pnlNavIndicator.Top = btnDashboard.Top;
             pnlNavIndicator.Left = btnDashboard.Left;
@@ -47,7 +48,7 @@ namespace Bislerium_cafe
             btnDashboard.BackColor = btnColor;
            
             btnEmployees.BackColor = btnColor;
-            btnCustomers.BackColor = btnColor;
+            
             btnReprts.BackColor = btnColor;
             btnCoffee.BackColor = btnColor;
             btnAddons.BackColor = btnColor;
@@ -92,16 +93,7 @@ namespace Bislerium_cafe
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            pnlNavIndicator.Height = btnCustomers.Height;
-            pnlNavIndicator.Top = btnCustomers.Top;
-            pnlNavIndicator.Left = btnCustomers.Left;
-            ButtonColorReset(btnCustomers);
-            lblTabTitle.Text = "Customer";
-            this.pnlContent.Controls.Clear();
-            Adminemployee FrmDashboard_Vrb = new Adminemployee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
-            FrmDashboard_Vrb.Show();
-
+           
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -114,6 +106,35 @@ namespace Bislerium_cafe
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            pnlNavIndicator.Height = btnEmployees.Height;
+            pnlNavIndicator.Top = btnEmployees.Top;
+            pnlNavIndicator.Left = btnEmployees.Left;
+            ButtonColorReset(btnEmployees);
+            lblTabTitle.Text = "Customer";
+            this.pnlContent.Controls.Clear();
+            Adminemployee FrmDashboard_Vrb = new Adminemployee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
+            FrmDashboard_Vrb.Show();
+
+
+        }
+
+        private void btnCoffee_Click(object sender, EventArgs e)
+        {
+            pnlNavIndicator.Height = btnCoffee.Height;
+            pnlNavIndicator.Top = btnCoffee.Top;
+            pnlNavIndicator.Left = btnCoffee.Left;
+            ButtonColorReset(btnCoffee);
+            lblTabTitle.Text = "Add Coffee";
+            this.pnlContent.Controls.Clear();
+            addcoffee FrmDashboard_Vrb = new addcoffee() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pnlContent.Controls.Add(FrmDashboard_Vrb);
+            FrmDashboard_Vrb.Show();
 
         }
     }

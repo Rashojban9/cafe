@@ -20,6 +20,37 @@ namespace Bislerium_cafe
             InitializeComponent();
         }
 
+        // Move the AuthenticateUser method inside the login class
+        private static bool AuthenticateUser(string username, string password, out string role)
+        {
+            role = null;
+
+            string excelPath = "C:\\Users\\rasho\\Desktop\\Application development\\staff_login_data.xlsx";
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage(new FileInfo(excelPath)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+
+                int rowCount = worksheet.Dimension.Rows;
+
+                for (int row = 1; row <= rowCount; row++)
+                {
+                    string username_ = worksheet.Cells[row, 6].Text;
+                    string password_ = worksheet.Cells[row, 7].Text;
+
+                    if (!string.IsNullOrEmpty(username_) && username_ == username && password_ == password)
+                    {
+                        role = worksheet.Cells[row, 8].Text;
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         private void Login_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -37,46 +68,32 @@ namespace Bislerium_cafe
             {
                 string username = usern.Text;
                 string password = passw.Text;
-                
-                bool errorMessage = true;
+                string role;
 
-                string excelPath = "C:\\Users\\rasho\\Desktop\\Application development\\staff_login_data.xlsx";
-
-                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
-                using (var package = new ExcelPackage(new FileInfo(excelPath)))
+                if (AuthenticateUser(username, password, out role))
                 {
-                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-
-                    int rowCount = worksheet.Dimension.Rows;
-
-                    for (int row = 1; row <= rowCount; row++)
+                    if (role.Equals("Admin"))
                     {
-                        string username_ = worksheet.Cells[row, 6].Text;
-                        string password_ = worksheet.Cells[row, 7].Text;
-                        string auth = worksheet.Cells[row, 8].Text;
-
-                        if (!string.IsNullOrEmpty(username_) && username_ == username && password_ == password)
-                        {
-                            new nav().Show();
-                            this.Hide();
-
-                            
-
-                            
-                        }
+                        new nav().Show();
+                        this.Hide();
                     }
-
-                    if (errorMessage)
+                    else
                     {
-                       
+                        new Staffnav().Show();
+                        this.Hide();
                     }
+                }
+                else
+                {
+                    // Authentication failed
+                    MessageBox.Show("Invalid username or password", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                
+                // Handle exceptions
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-    }
     }
 }

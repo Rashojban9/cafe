@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rrr = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(32)))));
             this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.rrr);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(585, 13);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
@@ -67,17 +67,29 @@
             this.panel6.Size = new System.Drawing.Size(353, 102);
             this.panel6.TabIndex = 14;
             // 
-            // label6
+            // pictureBox3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(115, 26);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 26);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "$ 13,034";
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
+            this.pictureBox3.Image = global::Bislerium_cafe.Properties.Resources.increase__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(27, 22);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 55);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // rrr
+            // 
+            this.rrr.AutoSize = true;
+            this.rrr.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.rrr.ForeColor = System.Drawing.Color.White;
+            this.rrr.Location = new System.Drawing.Point(115, 26);
+            this.rrr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.rrr.Name = "rrr";
+            this.rrr.Size = new System.Drawing.Size(96, 26);
+            this.rrr.TabIndex = 1;
+            this.rrr.Text = "$ 13,034";
             // 
             // label5
             // 
@@ -102,6 +114,18 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(353, 102);
             this.panel7.TabIndex = 15;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
+            this.pictureBox4.Image = global::Bislerium_cafe.Properties.Resources.waiter;
+            this.pictureBox4.Location = new System.Drawing.Point(27, 22);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(65, 55);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // label7
             // 
@@ -167,65 +191,6 @@
             this.label25.TabIndex = 1;
             this.label25.Text = "02";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(198)))), ((int)(((byte)(205)))));
-            this.label24.Location = new System.Drawing.Point(25, 21);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(174, 26);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Bislerium Stats";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(32)))));
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.label10);
-            this.panel8.Location = new System.Drawing.Point(332, 130);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(289, 102);
-            this.panel8.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(115, 26);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 26);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "453";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
-            this.label10.Location = new System.Drawing.Point(116, 55);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Total Customers";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
-            this.pictureBox5.Location = new System.Drawing.Point(27, 22);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 55);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // button12
             // 
             this.button12.FlatAppearance.BorderSize = 0;
@@ -258,29 +223,64 @@
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // label24
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
-            this.pictureBox4.Image = global::Bislerium_cafe.Properties.Resources.waiter;
-            this.pictureBox4.Location = new System.Drawing.Point(27, 22);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(65, 55);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(198)))), ((int)(((byte)(205)))));
+            this.label24.Location = new System.Drawing.Point(25, 21);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(174, 26);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Bislerium Stats";
             // 
-            // pictureBox3
+            // panel8
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
-            this.pictureBox3.Image = global::Bislerium_cafe.Properties.Resources.increase__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(27, 22);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(65, 55);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(32)))));
+            this.panel8.Controls.Add(this.pictureBox5);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Location = new System.Drawing.Point(332, 130);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(289, 102);
+            this.panel8.TabIndex = 17;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(23)))), ((int)(((byte)(40)))));
+            this.pictureBox5.Location = new System.Drawing.Point(27, 22);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(65, 55);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(115, 26);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 26);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "453";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(124)))), ((int)(((byte)(146)))));
+            this.label10.Location = new System.Drawing.Point(116, 55);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Total Customers";
             // 
             // Dashboard
             // 
@@ -294,18 +294,20 @@
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "FormDashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,7 +316,7 @@
 
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label rrr;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox4;

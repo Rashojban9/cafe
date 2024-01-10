@@ -166,6 +166,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addcoffee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addcoffee.Designer.cs">
+      <DependentUpon>addcoffee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addin.Designer.cs">
+      <DependentUpon>Addin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adminemployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,12 +216,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDashboard.Designer.cs">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffnav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffnav.Designer.cs">
+      <DependentUpon>Staffnav.cs</DependentUpon>
+    </Compile>
     <Compile Include="Widget.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Widget.Designer.cs">
       <DependentUpon>Widget.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addcoffee.resx">
+      <DependentUpon>addcoffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addin.resx">
+      <DependentUpon>Addin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adminemployee.resx">
       <DependentUpon>Adminemployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +269,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StaffDashboard.resx">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffnav.resx">
+      <DependentUpon>Staffnav.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +336,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chef1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="photo\pngwing.com %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

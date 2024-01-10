@@ -1,15 +1,8 @@
 ﻿using OfficeOpenXml;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace Bislerium_cafe
@@ -17,11 +10,13 @@ namespace Bislerium_cafe
     public partial class Adminemployee : Form
     {
         private Panel mainPanel;
+
         public Adminemployee()
         {
             InitializeComponent();
             InitializeComponents();
         }
+
         private void InitializeComponents()
         {
             string excelPath = "C:\\Users\\rasho\\Desktop\\Application development\\staff_login_data.xlsx";
@@ -45,7 +40,6 @@ namespace Bislerium_cafe
                     string password = worksheet.Cells[row, 7].Text;
                     string roles = worksheet.Cells[row, 8].Text;
                     string Full_Name = firstName + " " + lastName;
-                    
 
                     // Create a main Panel
                     mainPanel = new Panel
@@ -53,8 +47,6 @@ namespace Bislerium_cafe
                         Location = new Point(32, 91),
                         Size = new Size(742, 95),
                         BackColor = Color.FromArgb(26, 23, 40),
-
-
                     };
 
                     // Buttons
@@ -67,10 +59,8 @@ namespace Bislerium_cafe
                         BackColor = Color.FromArgb(26, 23, 40),
                         SizeMode = PictureBoxSizeMode.Zoom,
                         Image = Image.FromFile("C:\\Users\\rasho\\Desktop\\Application development\\WindowsFormsApp1\\Photo\\man.png"),
-
-
-
                     };
+
                     Label users_name = new Label()
                     {
                         Text = "Username",
@@ -85,9 +75,60 @@ namespace Bislerium_cafe
                         TextAlign = ContentAlignment.TopLeft,
                         AutoSize = true,
                         Font = new Font("Microsoft Sans Serif", 13)
-
-
                     };
+
+                    mainPanel.Click += (sender, e) =>
+                    {
+                        String username = users_name.Text;
+                        un.ReadOnly = true;
+                        string excelPath_ = "C:\\Users\\rasho\\Desktop\\Application development\\staff_login_data.xlsx";
+                        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+                        using (var package_ = new ExcelPackage(new FileInfo(excelPath_)))
+                        {
+                            ExcelWorksheet worksheet_ = package_.Workbook.Worksheets[0];
+
+                            // Find the row with the matching username
+                            for (int row_ = 2; row_ <= worksheet_.Dimension.Rows; row_++)
+                            {
+                                if (worksheet_.Cells[row_, 6].Text == username)
+                                {
+                                     string First_Name=fn.ToString();
+                                    string Last_Name=ln.ToString();
+                                    string Dob=dob.ToString();
+                                    string Email=email.ToString();
+                                    string phnumber=pn.ToString();
+                                    string User_name=un.ToString();
+                                    string Password=pd.ToString();
+                                    string Roless=Role.ToString();
+                                    AddEmployee.Visible = true;
+                                    fn.Text = worksheet_.Cells[row_, 1].Value.ToString();
+                                    ln.Text = worksheet_.Cells[row_, 2].Value.ToString();
+                                    pn.Text= worksheet_.Cells[row_, 5].Value.ToString();
+                                    un.Text= worksheet_.Cells[row_, 6].Value.ToString();
+                                    pd.Text= worksheet_.Cells[row_, 7].Value.ToString();
+                                    Role.Text= worksheet_.Cells[row_, 8].Value.ToString();
+                                    btnadd.Text = "update";
+
+
+
+
+
+
+                                    /*worksheet.Cells[row, 1].Value = "First_Name";
+                                     worksheet.Cells[row, 2].Value = "Last_Name";
+                                     worksheet.Cells[row, 3].Value = "Dob";
+                                     worksheet.Cells[row, 4].Value = "Email";
+                                     worksheet.Cells[row, 5].Value = "phnumber";
+                                     worksheet.Cells[row, 6].Value = "User_Name";
+                                     worksheet.Cells[row, 7].Value = "Password";
+                                     worksheet.Cells[row, 8].Value = "Roless";*/
+                                    break;
+                                }
+                            }
+                        }
+                    };
+
                     Label label1 = new Label()
                     {
                         Text = "Role",
@@ -102,8 +143,8 @@ namespace Bislerium_cafe
                         TextAlign = ContentAlignment.TopLeft,
                         AutoSize = true,
                         Font = new Font("Microsoft Sans Serif", 10)
-
                     };
+
                     Label role = new Label()
                     {
                         Text = "Admin",
@@ -118,48 +159,17 @@ namespace Bislerium_cafe
                         TextAlign = ContentAlignment.TopLeft,
                         AutoSize = true,
                         Font = new Font("Microsoft Sans Serif", 10)
-
-
                     };
-                    Button Edit = new Button()
-                    {
-                        BackColor = Color.FromArgb(26, 23, 40),
-                        BackgroundImageLayout = ImageLayout.Tile,
-                        FlatAppearance =
-                {
-                    BorderColor=Color.FromArgb(90,190,240),
-                    BorderSize=1,
 
-
-                },
-                        FlatStyle = FlatStyle.Flat,
-                        ForeColor = Color.FromArgb(90, 190, 240),
-                        ImageAlign = ContentAlignment.MiddleCenter,
-                        Location = new Point(549, 23),
-                        Margin = new Padding(4, 4, 4, 4),
-                        Size = new Size(62, 52),
-                        ImageIndex = 29,
-                        TextAlign = ContentAlignment.MiddleCenter,
-                        TabStop = true,
-                        TextImageRelation = TextImageRelation.ImageBeforeText,
-                        Text = "Edit",
-                        Font = new Font("Nirmala UI", 10, FontStyle.Bold)
-
-
-
-
-                    };
                     Button Delete = new Button()
                     {
                         BackColor = Color.FromArgb(26, 23, 40),
                         BackgroundImageLayout = ImageLayout.Tile,
                         FlatAppearance =
-                {
-                    BorderColor = Color.FromArgb(229, 99, 135),
-                    BorderSize = 1,
-
-
-                },
+                        {
+                            BorderColor = Color.FromArgb(229, 99, 135),
+                            BorderSize = 1,
+                        },
                         FlatStyle = FlatStyle.Flat,
                         ForeColor = Color.FromArgb(229, 99, 135),
                         ImageAlign = ContentAlignment.MiddleCenter,
@@ -172,31 +182,18 @@ namespace Bislerium_cafe
                         TextImageRelation = TextImageRelation.ImageBeforeText,
                         Text = "Delete",
                         Font = new Font("Nirmala UI", 10, FontStyle.Bold)
-
-
-
-// for deleting a employees
-
+                        // for deleting a employees
                     };
 
-
-                    Delete.Click += DeleteButton_Click;
                     users_name.Text = userName;
                     role.Text = roles;
 
-
-                    // editButton = CreateButton("Edit", Color.Blue, Color.Black);
-                    //deleteButton = CreateButton("Delete", Color.Red, Color.Black);
-
-                    // Add buttons to the main Panel
                     mainPanel.Controls.Add(users_name);
                     mainPanel.Controls.Add(label1);
                     mainPanel.Controls.Add(userphoto);
                     mainPanel.Controls.Add(role);
-                    mainPanel.Controls.Add(Edit);
                     mainPanel.Controls.Add(Delete);
 
-                    // Add the main Panel to the form
                     flowLayoutPanel1.Controls.Add(mainPanel);
                 }
             }
@@ -209,12 +206,12 @@ namespace Bislerium_cafe
 
         private void btncancel_Click(object sender, EventArgs e)
         {
-            AddEmployee.Visible=false;
+            AddEmployee.Visible = false;
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e, String username)
         {
-
+            // Your code for checkedListBox1_SelectedIndexChanged
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -246,27 +243,21 @@ namespace Bislerium_cafe
                 worksheet.Cells[newRow, 7].Value = password;
                 worksheet.Cells[newRow, 8].Value = role;
 
-                // Save changes to the Excel file
                 package.Save();
                 AddEmployee.Visible = false;
+                RefreshUI();
 
 
 
-            }
+            
 
         }
+    }
 
         private void RefreshUI()
         {
-            // Add code to refresh your UI after deletion, e.g., reload data or update controls
-            // ...
-
-            // Optional: Reload the data and recreate the panels/buttons
             flowLayoutPanel1.Controls.Clear();
             InitializeComponents();
         }
-
-
-
     }
 }
